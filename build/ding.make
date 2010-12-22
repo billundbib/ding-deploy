@@ -131,8 +131,8 @@ projects[oembed][version] = "0.7"
 projects[office_hours][type] = "module"
 projects[office_hours][subdir] = "contrib"
 projects[office_hours][download][type] = "git"
-projects[office_hours][download][url] = "https://github.com/mikl/drupal-office_hours.git"
-projects[office_hours][download][revision] = "9a33296734d534a20a66731de2008cf17f4f71e5"
+projects[office_hours][download][url] = "https://github.com/dingproject/drupal-office_hours.git"
+projects[office_hours][download][tag] = "DRUPAL-6--2-0-UNOFFICIAL7"
 
 projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.8"
@@ -205,6 +205,7 @@ projects[mothership][version] = "1.1"
 projects[dynamo][type] = "theme"
 projects[dynamo][download][type] = "git"
 projects[dynamo][download][url] = "https://github.com/dingproject/dynamo.git"
+projects[dynamo][download][revision] = "v2.1.4"
 
 ; Billund theme(s)
 ; Using copenhagen as base theme
@@ -221,26 +222,32 @@ projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 projects[alma][type] = "module"
 projects[alma][download][type] = "git"
 projects[alma][download][url] = "https://github.com/dingproject/alma.git"
+projects[alma][download][revision] = "v1.5.0"
 
 projects[openruth][type] = "module"
 projects[openruth][download][type] = "git"
 projects[openruth][download][url] = "https://github.com/dingproject/openruth.git"
+projects[openruth][download][revision] = "v1.0.1"
 
 projects[ding][type] = "module"
 projects[ding][download][type] = "git"
 projects[ding][download][url] = "https://github.com/dingproject/ding.git"
+projects[ding][download][revision] = "v1.5.0"
 
 projects[ding_campaign][type] = "module"
 projects[ding_campaign][download][type] = "git"
 projects[ding_campaign][download][url] = "https://github.com/dingproject/ding-campaign.git"
+projects[ding_campaign][download][revision] = "v1.3.1"
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
 projects[ting][download][url] = "https://github.com/dingproject/ting.git"
+projects[ting][download][revision] = "v1.5.0"
 
 ; Libraries
 libraries[ting-client][download][type] = "git"
 libraries[ting-client][download][url] = "https://github.com/dingproject/ting-client.git"
+libraries[ting-client][download][revision] = "v1.0.0"
 libraries[ting-client][destination] = "modules/ting/lib"
 
 libraries[jquery_ui][download][type] = "get"
