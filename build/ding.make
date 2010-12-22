@@ -206,6 +206,16 @@ projects[dynamo][type] = "theme"
 projects[dynamo][download][type] = "git"
 projects[dynamo][download][url] = "https://github.com/dingproject/dynamo.git"
 
+; Billund theme(s)
+; Using copenhagen as base theme
+projects[copenhagen][type] = "theme"
+projects[copenhagen][download][type] = "git"
+projects[copenhagen][download][url] = "https://github.com/kdb/copenhagen.git"
+
+projects[billund][type] = "theme"
+projects[billund][download][type] = "git"
+projects[billund][download][url] = "https://github.com/billundbib/billund.git"
+
 ; Ding modules
 
 projects[alma][type] = "module"
