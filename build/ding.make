@@ -217,6 +217,10 @@ projects[billund][type] = "theme"
 projects[billund][download][type] = "git"
 projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 
+; Billund extra modules
+projects[backup_migrate][subdir] = "contrib"
+projects[backup_migrate][version] = "2.4"
+
 ; Ding modules
 
 projects[alma][type] = "module"
