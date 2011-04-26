@@ -221,6 +221,17 @@ projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 projects[backup_migrate][subdir] = "contrib"
 projects[backup_migrate][version] = "2.4"
 
+projects[memcache][subdir] = "contrib"
+projects[memcache][version] = "1.8"
+;Patch memcache to make it install profile friendly - https://drupal.org/node/885478
+projects[memcache][patch][] = "http://drupal.org/files/issues/memcache-6.x-1.x-1295076267.patch"
+
+projects[scheduler][subdir] = "contrib"
+projects[scheduler][version] = "1.8"
+
+projects[securepages][subdir] = "contrib"
+projects[securepages][version] = "1.9"
+
 ; Ding modules
 
 projects[alma][type] = "module"
