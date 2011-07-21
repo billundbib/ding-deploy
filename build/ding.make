@@ -127,6 +127,8 @@ projects[menu_block][version] = "2.3"
 
 projects[oembed][subdir] = "contrib"
 projects[oembed][version] = "0.8"
+; Patch oEmbed to support for providers containing * in hostname e.g. Picasa. http://drupal.org/node/887412
+projects[oembed][patch][] = "http://drupal.org/files/issues/oembed-patterns-887412-1.patch"
 
 projects[office_hours][type] = "module"
 projects[office_hours][subdir] = "contrib"
