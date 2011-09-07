@@ -1,5 +1,8 @@
 <?php
-// $Id: ding.profile,v 1.1 2010/05/14 08:28:32 mikl Exp $
+/**
+ * @file
+ * Drupal install profile for Ding.
+ */
 
 /**
  * Implementation of hook_profile_details().
@@ -22,7 +25,6 @@ function ding_profile_modules() {
 
     // Contrib modules
     'admin',
-    'admin_language',
     'admin_theme',
     'adminrole',
     'advanced_help',
@@ -52,13 +54,12 @@ function ding_profile_modules() {
     'date_timezone',
     'date',
     'ding_user',
+    'diff',
     'email',
     'environment_indicator',
     'features',
     'filefield',
     'globalredirect',
-    'gmap',
-    'gmap_location',
     'googleanalytics',
     'htmLawed',
     'imageapi',
@@ -69,7 +70,6 @@ function ding_profile_modules() {
     'image_resize_filter',
     'insert',
     'jquery_update',
-    'keys',
     'link',
     'location',
     'location_fax',
@@ -77,8 +77,10 @@ function ding_profile_modules() {
     'location_node',
     'markdown',
     'menu_block',
+    'nanosoap',
     'oembed',
     'oembedcore',
+    'openlayers',
     'optionwidgets',
     'page_manager',
     'panels',
