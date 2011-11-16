@@ -236,6 +236,11 @@ projects[billund][type] = "theme"
 projects[billund][download][type] = "git"
 projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 
+; Using copenhagens mobile theme for mobile theme
+projects[cph-mobile][type] = "theme"
+projects[cph-mobile][download][type] = "git"
+projects[cph-mobile][download][url] = "https://github.com/kdb/cph-mobile.git"
+
 ; Billund extra modules
 projects[backup_migrate][subdir] = "contrib"
 projects[backup_migrate][version] = "2.4"
@@ -306,3 +311,20 @@ libraries[tinymce][download][url] = "https://github.com/downloads/tinymce/tinymc
 libraries[tinymce][directory_name] = "tinymce"
 libraries[tinymce][destination] = "libraries"
 
+; Ding mobile
+
+projects[ding-mobile][type] = "module"
+projects[ding-mobile][download][type] = "git"
+projects[ding-mobile][download][url] = "https://github.com/dingproject/ding-mobile.git"
+;projects[ding-mobile][download][revision] = "v1.0"
+
+projects[mobile_tools][subdir] = "contrib"
+projects[mobile_tools][version] = "2.3"
+
+projects[browscap][subdir] = "contrib"
+projects[browscap][version] = "1.1"
+
+projects[alternator][type] = "theme"
+projects[alternator][download][type] = "git"
+projects[alternator][download][url] = "http://github.com/helsbib/alternator.git"
+;projects[alternator][download][revision] = "v1.0"
