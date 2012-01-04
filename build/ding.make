@@ -241,6 +241,12 @@ projects[cph-mobile][type] = "theme"
 projects[cph-mobile][download][type] = "git"
 projects[cph-mobile][download][url] = "https://github.com/kdb/cph-mobile.git"
 
+; Billund modules
+projects[bricks][type] = "module"
+projects[bricks][download][type] = "git"
+projects[bricks][download][url] = "https://github.com/billundbib/bricks.git"
+
+
 ; Billund extra modules
 projects[backup_migrate][subdir] = "contrib"
 projects[backup_migrate][version] = "2.4"
@@ -294,6 +300,10 @@ projects[ding_place2book][type] = "module"
 projects[ding_place2book][download][type] = "git"
 projects[ding_place2book][download][url] = "https://github.com/vejlebib/ding_place2book.git"
 projects[ding_place2book][download][revision] = "v1.0.1"
+
+projects[ding_tabroll][type] = "module"
+projects[ding_tabroll][download][type] = "git"
+projects[ding_tabroll][download][url] = "https://github.com/vejlebib/ding_tabroll.git"
 
 ; Libraries
 libraries[ting-client][destination] = "modules/ting/lib"
