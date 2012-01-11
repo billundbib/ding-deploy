@@ -30,6 +30,9 @@ env.roledefs = {
     'roedovre:prod': ['deploy@roedovre.dbc.dk'],
     'helsbib:stg': ['deploy@helsingoer.dbc.dk'],
     'helsbib:prod': ['deploy@helsingoer.dbc.dk'],
+    'albertslund:dev': ['deploy@albertslund.dbc.dk'],
+    'albertslund:stg': ['deploy@albertslund.dbc.dk'],
+    'albertslund:prod': ['deploy@albertslund.dbc.dk'],
 }
 
 env.webroot_patterns = {
@@ -52,7 +55,7 @@ def _env_settings(project=None):
     # If project was not set, extract it from the role.
     if not project:
         try:
-            env.role, project = env.role.split(':')
+            project, env.role = env.role.split(':')
         except ValueError:
             abort('No project in role and no project specified.')
 
@@ -85,7 +88,7 @@ def sync_from_prod(project=None):
     """
     _env_settings(project)
 
-    if env.get('roles') != ['stg']:
+    if env.role != 'stg':
         abort('sync_from_prod is not supported for non-stg roles.')
 
     run('mysqldump drupal6_ding_%s_prod | mysql drupal6_ding_%s_stg' % (env.project, env.project))
@@ -110,10 +113,10 @@ def deploy(project=None, commit=None):
     )
 
     make_path = time.strftime('ding-%Y%m%d%H%M')[:-1]
-    cwd = os.path.join(env.build_path, env.project, 'build')
-    abs_make_path = os.path.join(cwd, make_path)
+    profile_path = os.path.join(env.build_path, env.project)
+    abs_make_path = os.path.join(profile_path, 'build', make_path)
 
-    with cd(cwd):
+    with cd(profile_path):
         # Update git checkout.
         run('git fetch')
         run('git checkout %s' % commit)

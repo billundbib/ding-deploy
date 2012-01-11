@@ -136,7 +136,7 @@ projects[menu_block][subdir] = "contrib"
 projects[menu_block][version] = "2.4"
 
 projects[nanosoap][subdir] = contrib
-projects[nanosoap][version] = 1.x-dev
+projects[nanosoap][version] = "1.0-beta3"
 
 projects[oembed][subdir] = "contrib"
 projects[oembed][version] = "0.9-alpha1"
@@ -145,7 +145,7 @@ projects[office_hours][type] = "module"
 projects[office_hours][subdir] = "contrib"
 projects[office_hours][download][type] = "git"
 projects[office_hours][download][url] = "https://github.com/dingproject/drupal-office_hours.git"
-projects[office_hours][download][tag] = "6.x-2.0-unofficial8"
+projects[office_hours][download][revision] = "6.x-2.0-unofficial10"
 
 projects[openlayers][subdir] = contrib
 projects[openlayers][version] = 2.0-beta1
@@ -201,10 +201,10 @@ projects[vertical_tabs][subdir] = "contrib"
 projects[vertical_tabs][version] = "1.0-rc1"
 
 projects[views][subdir] = "contrib"
-projects[views][version] = "2.12"
+projects[views][version] = "2.14"
 
 projects[views_bulk_operations][subdir] = "contrib"
-projects[views_bulk_operations][version] = "1.10"
+projects[views_bulk_operations][version] = "1.12"
 
 projects[webform][subdir] = contrib
 projects[webform][version] = 3.11
@@ -224,7 +224,7 @@ projects[mothership][version] = "1.1"
 projects[dynamo][type] = "theme"
 projects[dynamo][download][type] = "git"
 projects[dynamo][download][url] = "https://github.com/dingproject/dynamo.git"
-projects[dynamo][download][revision] = "v2.2.0"
+projects[dynamo][download][revision] = "v2.3.0beta1"
 
 ; Billund theme(s)
 ; Using copenhagen as base theme
@@ -264,7 +264,7 @@ projects[scheduler][version] = "1.8"
 projects[alma][type] = "module"
 projects[alma][download][type] = "git"
 projects[alma][download][url] = "https://github.com/dingproject/alma.git"
-projects[alma][download][revision] = "v1.6.0"
+projects[alma][download][revision] = "v1.7.0beta3"
 
 projects[openruth][type] = "module"
 projects[openruth][download][type] = "git"
@@ -274,22 +274,22 @@ projects[openruth][download][revision] = "v1.0.9"
 projects[ding][type] = "module"
 projects[ding][download][type] = "git"
 projects[ding][download][url] = "https://github.com/dingproject/ding.git"
-projects[ding][download][revision] = "v1.6.0"
+projects[ding][download][revision] = "v1.7.0beta2"
 
 projects[ding_campaign][type] = "module"
 projects[ding_campaign][download][type] = "git"
 projects[ding_campaign][download][url] = "https://github.com/dingproject/ding-campaign.git"
-projects[ding_campaign][download][revision] = "v1.3.2"
+projects[ding_campaign][download][revision] = "v1.4.0"
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
 projects[ting][download][url] = "https://github.com/dingproject/ting.git"
-projects[ting][download][revision] = "v1.6.0.1"
+projects[ting][download][revision] = "v1.7.0beta2"
 
 projects[trampoline][type] = "module"
 projects[trampoline][download][type] = "git"
 projects[trampoline][download][url] = "https://github.com/dingproject/trampoline.git"
-projects[trampoline][download][revision] = "v1.2.3"
+projects[trampoline][download][revision] = "v1.3.1"
 
 projects[webtrends][type] = "module"
 projects[webtrends][download][type] = "git"
@@ -309,7 +309,8 @@ projects[ding_tabroll][download][url] = "https://github.com/vejlebib/ding_tabrol
 libraries[ting-client][destination] = "modules/ting/lib"
 libraries[ting-client][download][type] = "git"
 libraries[ting-client][download][url] = "https://github.com/dingproject/ting-client.git"
-libraries[ting-client][download][revision] = "v1.1.0"
+libraries[ting-client][download][revision] = "v1.2.0beta1"
+
 
 libraries[jquery_ui][download][type] = "get"
 libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
