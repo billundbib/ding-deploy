@@ -325,7 +325,7 @@ libraries[tinymce][destination] = "libraries"
 
 projects[ding-mobile][type] = "module"
 projects[ding-mobile][download][type] = "git"
-projects[ding-mobile][download][url] = "https://github.com/dingproject/ding-mobile.git"
+projects[ding-mobile][download][url] = "https://github.com/helsbib/ding-mobile.git"
 ;projects[ding-mobile][download][revision] = "v1.0"
 
 projects[mobile_tools][subdir] = "contrib"
