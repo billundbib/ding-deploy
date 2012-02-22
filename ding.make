@@ -278,8 +278,8 @@ projects[ding][download][revision] = "v1.7.0beta2"
 
 projects[ding_campaign][type] = "module"
 projects[ding_campaign][download][type] = "git"
-projects[ding_campaign][download][url] = "https://github.com/dingproject/ding-campaign.git"
-projects[ding_campaign][download][revision] = "v1.4.0"
+projects[ding_campaign][download][url] = "https://github.com/billundbib/ding-campaign.git"
+; projects[ding_campaign][download][revision] = "v1.4.0"
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
