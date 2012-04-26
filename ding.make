@@ -299,6 +299,8 @@ projects[ting][type] = "module"
 projects[ting][download][type] = "git"
 projects[ting][download][url] = "https://github.com/dingproject/ting.git"
 projects[ting][download][revision] = "v1.7.0"
+; Patch to fix the bad theming in ting, which the latest alternator relies on.
+projects[ting][patch][] = "https://github.com/dingproject/ting/pull/35.diff"
 
 projects[trampoline][type] = "module"
 projects[trampoline][download][type] = "git"
@@ -340,8 +342,11 @@ libraries[tinymce][destination] = "libraries"
 
 projects[ding-mobile][type] = "module"
 projects[ding-mobile][download][type] = "git"
-projects[ding-mobile][download][url] = "https://github.com/helsbib/ding-mobile.git"
-;projects[ding-mobile][download][revision] = "v1.0"
+projects[ding-mobile][download][url] = "https://github.com/dingproject/ding-mobile.git"
+; Fix version.
+projects[ding-mobile][download][revision] = "ffc386ea4cc15d970e2a7013a276b5afbdc84030"
+; Apply Opening hours patch.
+projects[ding-mobile][patch][] = "https://github.com/kdb/ding-mobile/commit/9fbc4e3ac9cdb354356ff1257f1497e0e17a7bfb.diff"
 
 projects[mobile_tools][subdir] = "contrib"
 projects[mobile_tools][version] = "2.3"
@@ -351,5 +356,8 @@ projects[browscap][version] = "1.1"
 
 projects[alternator][type] = "theme"
 projects[alternator][download][type] = "git"
-projects[alternator][download][url] = "http://github.com/helsbib/alternator.git"
+; Our own
+; styling fix from kdb, which we needs because opening_hours uses
+; header.
+projects[alternator][download][url] = "http://github.com/billundbib/alternator.git"
 ;projects[alternator][download][revision] = "v1.0"
