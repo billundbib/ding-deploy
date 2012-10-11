@@ -231,6 +231,11 @@ projects[dynamo][download][revision] = "v2.3.0beta1"
 projects[copenhagen][type] = "theme"
 projects[copenhagen][download][type] = "git"
 projects[copenhagen][download][url] = "https://github.com/kdb/copenhagen.git"
+; Billund did not use a fixed revision of KKBs theme when deploying 
+; last time to production Feb 22 2012. This is the latest known version of KKBs 
+; theme which has been known to work at Billund production based on 1.7.0.
+; This needs to be fixed when updating to 1.8.0.
+projects[copenhagen][download][revision] = "c01edfe70e9098c9f57eb5ceff83565798c20898"
 
 projects[billund][type] = "theme"
 projects[billund][download][type] = "git"
@@ -240,6 +245,8 @@ projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 projects[cph-mobile][type] = "theme"
 projects[cph-mobile][download][type] = "git"
 projects[cph-mobile][download][url] = "https://github.com/kdb/cph-mobile.git"
+; See note regarding KDB/Copenhagen
+projects[cph-mobile][download][revision] = "a105cf2e6ebb400f2025f319ce836e218380d050"
 
 ; Billund modules
 projects[bricks][type] = "module"
@@ -304,6 +311,7 @@ projects[ding_place2book][download][revision] = "v1.0.1"
 projects[ding_tabroll][type] = "module"
 projects[ding_tabroll][download][type] = "git"
 projects[ding_tabroll][download][url] = "https://github.com/vejlebib/ding_tabroll.git"
+projects[ding_tabroll][download][revision] = "v1.0"
 
 ; Libraries
 libraries[ting-client][destination] = "modules/ting/lib"
@@ -327,7 +335,8 @@ libraries[tinymce][destination] = "libraries"
 projects[ding-mobile][type] = "module"
 projects[ding-mobile][download][type] = "git"
 projects[ding-mobile][download][url] = "https://github.com/helsbib/ding-mobile.git"
-;projects[ding-mobile][download][revision] = "v1.0"
+; See note regarding KDB/Copenhagen
+projects[ding-mobile][download][revision] = "05089fb7c3c3b90631091ab3845224decfa2ad81"
 
 projects[mobile_tools][subdir] = "contrib"
 projects[mobile_tools][version] = "2.3"
@@ -338,4 +347,5 @@ projects[browscap][version] = "1.1"
 projects[alternator][type] = "theme"
 projects[alternator][download][type] = "git"
 projects[alternator][download][url] = "http://github.com/helsbib/alternator.git"
-;projects[alternator][download][revision] = "v1.0"
+; See note regarding KDB/Copenhagen
+projects[alternator][download][revision] = "e641eec490ec2a42788e7a1ff725faaad0dc89ad"
