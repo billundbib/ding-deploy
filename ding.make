@@ -290,8 +290,10 @@ projects[ding_campaign][download][revision] = "v1.4.0"
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
-projects[ting][download][url] = "https://github.com/dingproject/ting.git"
-projects[ting][download][revision] = "v1.7.0beta2"
+; Added patches:
+; - Support for MoreInfo service
+projects[ting][download][url] = "https://github.com/billundbib/ting.git"
+projects[ting][download][branch] = "v1.7.0.x"
 
 projects[trampoline][type] = "module"
 projects[trampoline][download][type] = "git"
