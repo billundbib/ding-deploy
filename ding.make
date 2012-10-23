@@ -309,7 +309,7 @@ projects[webtrends][download][revision] = "v1.1.2"
 projects[ding_place2book][type] = "module"
 projects[ding_place2book][download][type] = "git"
 projects[ding_place2book][download][url] = "https://github.com/vejlebib/ding_place2book.git"
-projects[ding_place2book][download][revision] = "v1.0.1"
+projects[ding_place2book][download][revision] = "v1.0.7"
 
 projects[ding_tabroll][type] = "module"
 projects[ding_tabroll][download][type] = "git"
