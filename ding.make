@@ -251,7 +251,7 @@ projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 projects[cph-mobile][type] = "theme"
 projects[cph-mobile][download][type] = "git"
 projects[cph-mobile][download][url] = "https://github.com/kdb/cph-mobile.git"
-projects[copenhagen][download][revision] = "0e65df0977b5c0b4f8133ca4e6380812ff8b61b2"
+projects[cph-mobile][download][revision] = "0e65df0977b5c0b4f8133ca4e6380812ff8b61b2"
 
 ; Billund modules
 projects[bricks][type] = "module"
