@@ -235,6 +235,8 @@ projects[dynamo][type] = "theme"
 projects[dynamo][download][type] = "git"
 projects[dynamo][download][url] = "https://github.com/dingproject/dynamo.git"
 projects[dynamo][download][revision] = "v2.4.0-rc2"
+; Pull request 14, fixes list image in the default node template.
+projects[dynamo][patch][] = "https://github.com/dingproject/dynamo/pull/14.diff"
 
 ; Billund theme(s)
 ; Using copenhagen as base theme
