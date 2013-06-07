@@ -7,13 +7,6 @@ projects[pressflow][type] = "core"
 projects[pressflow][download][type] = "get"
 projects[pressflow][download][url] = "http://files.pressflow.org/pressflow-6-current.tar.gz"
 
-; Get drakefile.php.
-libraries[drakefile][download][type] = file
-libraries[drakefile][download][filename] = "drakefile.php"
-libraries[drakefile][download][url] = "https://raw.github.com/billundbib/ding-deploy/master/drakefile.php"
-libraries[drakefile][directory_name] = "drush"
-libraries[drakefile][destination] = ""
-
 ; Contrib projects
 
 projects[admin][subdir] = "contrib"
