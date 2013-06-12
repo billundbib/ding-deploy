@@ -3,9 +3,35 @@
 /**
  * @file
  * Drakefile for Billund Bibliotek. Requires drake_reload.
+ *
+ * Custom modifications should go at the end of the file to be retained by
+ * drake-rebuild-generate.
+ *
+ * You can override standard tasks by simply moving them below the marker line
+ * (search for "retained" to find it) and modifying them.
  */
 
 $api = 1;
+
+/*
+ * Drake Reload settings. This allows us to re-run drg.
+ */
+$drake_reload = array(
+  'site_name' => 'Billund Bibliotek',
+  'type' => 'ding',
+  'ding_url' => 'git@github.com:billundbib/ding-deploy.git',
+  'envs' => array(
+    'prod' => array(
+      'alias' => '@r.billund.prod',
+      'name' => 'Prod',
+    ),
+    'stg' => array(
+      'alias' => '@r.billund.stg',
+      'name' => 'Staging',
+    ),
+  ),
+);
+
 
 $context = array(
   // Prod site alias.
@@ -79,6 +105,13 @@ $tasks['import-file'] = array(
   'depends' => array('reload-load-db', 'sanitize'),
 );
 
+$tasks['redrake'] = array(
+  'action' => 'drush',
+  'help' => 'Regenerate the drakefile using drake-reload-generate',
+  'command' => 'drake-reload-generate',
+  'args' => array(__FILE__, 'y' => TRUE),
+);
+
 /*
  * Custom sanitation function. Invoked by our own import-db.
  */
@@ -91,10 +124,13 @@ $tasks['sanitize'] = array(
       'command' => 'pm-disable',
       'args' => array('trampoline', 'y' => TRUE),
     ),
-    // Set site name to "%site_name% [hostname]"
+    // Set site name to "Billund Bibliotek [hostname]"
     array(
       'command' => 'vset',
-      'args' => array('site_name', '%site_name% ' . php_uname('n')),
+      'args' => array('site_name', 'Billund Bibliotek ' . php_uname('n')),
     ),
   ),
 );
+
+// ### Everything below this will be retained by drush-reload-generate ###
+
