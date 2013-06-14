@@ -17,6 +17,7 @@ $api = 1;
  * Drake Reload settings. This allows us to re-run drg.
  */
 $drake_reload = array(
+  'core' => '6.x',
   'site_name' => 'Billund Bibliotek',
   'type' => 'ding',
   'ding_url' => 'git@github.com:billundbib/ding-deploy.git',
@@ -33,7 +34,12 @@ $drake_reload = array(
 );
 
 
+/*
+ * Global context.
+ */
 $context = array(
+  // Drupal core version.
+  'core' => '6.x',
   // Prod site alias.
   '@env.prod' => '@r.billund.prod',
   // Staging site alias.
@@ -42,15 +48,21 @@ $context = array(
   'repository' => 'git@github.com:billundbib/ding-deploy.git',
 );
 
+/*
+ * Build site via ding_deploy.
+ */
 $tasks['build'] = array(
   'depends' => array('reload-ding-build'),
-  'help' => 'Build site from nothing but a make file.',
+  'help' => 'Build site from a ding_deploy repo.',
   'context' => array(
     'root' => drake_argument(1, 'Directory to build to.'),
     'repo' => context('repository'),
   ),
 );
 
+/*
+ * Rebuild site via ding_deploy.
+ */
 $tasks['rebuild'] = array(
   'depends' => array('reload-ding-rebuild'),
   'help' => 'Rebuild the current site.',
@@ -60,6 +72,9 @@ $tasks['rebuild'] = array(
   ),
 );
 
+/*
+ * Import database from "Prod".
+ */
 $tasks['import-prod'] = array(
   'depends' => array('reload-import-site'),
   'help' => 'Import database form "Prod".',
@@ -69,6 +84,9 @@ $tasks['import-prod'] = array(
   ),
 );
 
+/*
+ * Import database from "Staging".
+ */
 $tasks['import-stg'] = array(
   'depends' => array('reload-import-site'),
   'help' => 'Import database form "Staging".',
@@ -78,6 +96,9 @@ $tasks['import-stg'] = array(
   ),
 );
 
+/*
+ * Import database from a file.
+ */
 $tasks['import-sql'] = array(
   'depends' => array('reload-import-file'),
   'help' => 'Import database form SQL dump.',
@@ -105,24 +126,25 @@ $tasks['import-file'] = array(
   'depends' => array('reload-load-db', 'sanitize'),
 );
 
-$tasks['redrake'] = array(
-  'action' => 'drush',
-  'help' => 'Regenerate the drakefile using drake-reload-generate',
-  'command' => 'drake-reload-generate',
-  'args' => array(__FILE__, 'y' => TRUE),
-);
-
 /*
  * Custom sanitation function. Invoked by our own import-db.
  */
 $tasks['sanitize'] = array(
-  'action' => 'drush',
+  'depends' => array('reload-ding-fix-error-level', 'sanitize-drush', 'reload-fix-mobile-tools'),
   'help' => 'Sanitizes database post-import.',
+);
+
+/*
+ * Runs misc sanitation drush commands.
+ */
+$tasks['sanitize-drush'] = array(
+  'action' => 'drush',
   'commands' => array(
     // Disable trampoline first thing, or else it'll kill everything later on.
+    // Same for memcache_admin.
     array(
       'command' => 'pm-disable',
-      'args' => array('trampoline', 'y' => TRUE),
+      'args' => array('trampoline', 'memcache_admin', 'securepages', 'y' => TRUE),
     ),
     // Set site name to "Billund Bibliotek [hostname]"
     array(
@@ -130,6 +152,16 @@ $tasks['sanitize'] = array(
       'args' => array('site_name', 'Billund Bibliotek ' . php_uname('n')),
     ),
   ),
+);
+
+/*
+ * Regenerate drakefile.
+ */
+$tasks['redrake'] = array(
+  'action' => 'drush',
+  'help' => 'Regenerate the drakefile using drake-reload-generate',
+  'command' => 'drake-reload-generate',
+  'args' => array(__FILE__, 'y' => TRUE),
 );
 
 // ### Everything below this will be retained by drush-reload-generate ###
