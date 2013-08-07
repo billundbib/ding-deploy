@@ -73,6 +73,9 @@ projects[email][version] = "1.2"
 projects[environment_indicator][subdir] = contrib
 projects[environment_indicator][version] = 1.1
 
+projects[eu-cookie-compliance][subdir] = "contrib"
+projects[eu-cookie-compliance][version] = "1.7"
+
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.2"
 ; Patch to fix reverting menu links http://drupal.org/node/860974
