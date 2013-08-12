@@ -255,8 +255,8 @@ projects[billund][download][url] = "https://github.com/billundbib/billund.git"
 ; Using copenhagens mobile theme for mobile theme
 projects[cph-mobile][type] = "theme"
 projects[cph-mobile][download][type] = "git"
-projects[cph-mobile][download][url] = "https://github.com/kdb/cph-mobile.git"
-projects[cph-mobile][download][revision] = "0e65df0977b5c0b4f8133ca4e6380812ff8b61b2"
+projects[cph-mobile][download][url] = "https://github.com/billundbib/cph-mobile.git"
+projects[cph-mobile][download][revision] = "0d0481ab504ce1d8213f83aec73019ff96a85925"
 
 ; Billund modules
 projects[bricks][type] = "module"
