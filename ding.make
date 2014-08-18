@@ -327,6 +327,8 @@ projects[webtrends][type] = "module"
 projects[webtrends][download][type] = "git"
 projects[webtrends][download][url] = "https://github.com/dingproject/webtrends.git"
 projects[webtrends][download][revision] = "v1.1.2"
+; Updated to webtrends 10.4.1
+projects[webtrends][patch][] = "https://github.com/dingproject/webtrends/pull/2.patch"
 
 projects[ding_place2book][type] = "module"
 projects[ding_place2book][download][type] = "git"
