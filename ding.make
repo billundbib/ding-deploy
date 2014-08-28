@@ -372,5 +372,5 @@ projects[alternator][type] = "theme"
 projects[alternator][download][type] = "git"
 ; Our own version merges Ting 1.7 fixes from helsbib and header
 ; styling fix from kdb, which we needs because opening_hours uses header.
-projects[alternator][download][url] = "http://github.com/billundbib/alternator.git"
+projects[alternator][download][url] = "https://github.com/billundbib/alternator.git"
 ;projects[alternator][download][revision] = "v1.0"
